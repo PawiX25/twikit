@@ -24,6 +24,8 @@ class Media:
         The expanded display URL.
     media_url : :class:`str`
         The media URL.
+    source_url : :class:`str`
+        The original (full-resolution) media URL.
     source_status_id : :class:`str`
         The source tweet ID.
     source_user_id : :class:`str`
@@ -60,6 +62,15 @@ class Media:
     @property
     def media_url(self) -> str:
         return self._data.get('media_url_https')
+
+    @property
+    def source_url(self) -> str:
+        """The original (full-resolution) media URL."""
+        url = self._data.get('media_url_https')
+        if not url:
+            return url
+        sep = '&' if '?' in url else '?'
+        return f'{url}{sep}name=orig'
 
     @property
     def source_status_id(self) -> str:
