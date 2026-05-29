@@ -186,6 +186,7 @@ class GuestClient:
             'content-type': 'application/json',
             'X-Twitter-Active-User': 'yes',
             'Referer': f'https://{DOMAIN}',
+            'User-Agent': self._user_agent,
         }
 
         if self.language is not None:
