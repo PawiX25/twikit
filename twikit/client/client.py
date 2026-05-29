@@ -2622,7 +2622,7 @@ class Client:
         timeline_id = TIMELINE_IDS.get(category)
         if timeline_id is None:
             return []
-        
+
         response, _ = await self.gql.generic_timeline_by_id(timeline_id, count)
         entry_id_prefix = "trend"
         entries = [
@@ -2630,12 +2630,12 @@ class Client:
             if i['entryId'].startswith(entry_id_prefix)
         ]
         if not entries:
-          if not retry:
-              return []
-          # Recall the method again, as the trend information
-          # may not be returned due to a Twitter error.
-          return await self.get_trends(category, count, retry, additional_request_params)
-        
+            if not retry:
+                return []
+            # Recall the method again, as the trend information
+            # may not be returned due to a Twitter error.
+            return await self.get_trends(category, count, retry, additional_request_params)
+
         results = []
         for entry in entries:
             item_content = entry['content'].get('itemContent')

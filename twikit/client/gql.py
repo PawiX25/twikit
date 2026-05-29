@@ -310,9 +310,9 @@ class GQLClient:
         return await self.tweet_engagements(tweet_id, count, cursor, Endpoint.FAVORITERS)
 
     async def explore_page(self):
-        variables = {'cursor': ''}        
+        variables = {'cursor': ''}
         return await self.gql_get(Endpoint.EXPLORE_PAGE, variables, EXPLORE_PAGE_FEATURES)
-    
+
     async def generic_timeline_by_id(self, timeline_id, count):
         variables = {
             'timelineId': timeline_id,
