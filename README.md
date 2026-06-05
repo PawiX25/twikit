@@ -8,6 +8,7 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/pypi/v/twifork?color=blue&label=PyPI" alt="PyPI">
   <img src="https://img.shields.io/badge/python-3.8%2B-blue" alt="Python 3.8+">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License">
   <img src="https://img.shields.io/github/stars/PawiX25/twifork?style=flat&color=yellow" alt="Stars">
@@ -20,13 +21,19 @@
 ## Install
 
 ```bash
-pip install git+https://github.com/PawiX25/twifork.git
+pip install twifork
 ```
 
-Optional browser-TLS impersonation (gets past some `403` walls):
+With optional browser-TLS impersonation (gets past some `403` walls):
 
 ```bash
-pip install "twikit[impersonate] @ git+https://github.com/PawiX25/twifork.git"
+pip install "twifork[impersonate]"
+```
+
+Or grab the latest straight from git:
+
+```bash
+pip install git+https://github.com/PawiX25/twifork.git
 ```
 
 ## Why this fork?
