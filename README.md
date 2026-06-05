@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" width="640" alt="twifork">
+  <img src="https://raw.githubusercontent.com/PawiX25/twifork/main/assets/banner.png" width="640" alt="twifork">
 </p>
 
 <p align="center">

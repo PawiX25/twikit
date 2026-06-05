@@ -10,8 +10,9 @@ with open('./twikit/__init__.py') as f:
 
 
 setup(
-    name='twikit',
+    name='twifork',
     version=version,
+    author='PawiX25',
     install_requires=[
         'httpx[socks]',
         'filetype',
@@ -26,10 +27,10 @@ setup(
         'impersonate': ['curl_cffi>=0.7,<0.8'],
     },
     python_requires='>=3.8',
-    description='Twitter API wrapper for python with **no API key required**.',
+    description='A maintained fork of twikit — Twitter/X API scraper for Python, no API key required.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     license='MIT',
-    url='https://github.com/d60/twikit',
+    url='https://github.com/PawiX25/twifork',
     package_data={'twikit': ['py.typed']}
 )
