@@ -39,7 +39,7 @@ that make the upstream PyPI release (`twikit==2.3.3`) unusable as of 2026.
 Install it with:
 
 ```
-pip install git+https://github.com/PawiX25/twikit.git
+pip install git+https://github.com/PawiX25/twifork.git
 ```
 
 Fixes included (resolving the corresponding upstream issues):
@@ -91,7 +91,7 @@ Some X endpoints reject the default `httpx` TLS fingerprint with a `403`
 browser TLS fingerprint, which avoids those 403s:
 
 ```
-pip install "twikit[impersonate] @ git+https://github.com/PawiX25/twikit.git"
+pip install "twikit[impersonate] @ git+https://github.com/PawiX25/twifork.git"
 ```
 
 ```python
